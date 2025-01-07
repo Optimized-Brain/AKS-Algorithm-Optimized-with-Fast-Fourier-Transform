@@ -22,28 +22,28 @@ By using FFT for polynomial multiplication, we reduce the time complexity involv
 
 ### What is the AKS Primality Test?
 
-The AKS Primality Test is a deterministic test that checks whether a given number \( n \) is prime. Before this test, primality tests like the Miller-Rabin test were probabilistic, which meant they might not always provide the correct answer. The AKS test, however, is deterministic and runs in polynomial time.
+The AKS Primality Test is a deterministic test that checks whether a given number $\( n \)$ is prime. Before this test, primality tests like the Miller-Rabin test were probabilistic, which meant they might not always provide the correct answer. The AKS test, however, is deterministic and runs in polynomial time.
 
 The AKS test consists of several steps:
 
 **Perfect Power Check**  
-   Verify if \( n \) is a perfect power. If \( n = a^b \) for integers \( a > 1 \) and \( b > 1 \), then \( n \) is **not prime**.
+   Verify if $\( n \)$ is a perfect power. If $\( n = a^b \)$ for integers $\( a > 1 \)$ and $\( b > 1 \)$, then $\( n \)$ is **not prime**.
 
 2. **Smallest \( r \) Calculation**  
    Find the smallest integer \( r \) such that the order of \( n \mod r \), denoted as \( \text{ord}_r(n) \), satisfies:  
-   \[
+   $\[
    \text{ord}_r(n) > \log^2(n)
-   \]
+   \]$
 
 3. **GCD Check**  
-   Check if \( \gcd(a, n) = 1 \) for all integers \( a \) where \( 1 \leq a \leq r \). If \( \gcd(a, n) > 1 \) for any \( a \), \( n \) is **not prime**.
+   Check if $\( \gcd(a, n) = 1 \)$ for all integers $\( a \)$ where $\( 1 \leq a \leq r \)$. If $\( \gcd(a, n) > 1 \)$ for any $\( a \)$, $\( n \)$ is **not prime**.
 
 4. **Polynomial Congruence**  
    Verify the following polynomial congruence:  
-   \[
+   $\[
    (x + a)^n \equiv x^n + a \pmod{n, x^r - 1} \quad \text{for all } 1 \leq a \leq \lfloor \sqrt{\phi(r)} \log(n) \rfloor
-   \]  
-   If the congruence holds, \( n \) is **prime**; otherwise, it is **composite**.
+   \] $ 
+   If the congruence holds, $\( n \)$ is **prime**; otherwise, it is **composite**.
 The main computational challenge in the AKS test comes from the polynomial multiplication used in the congruence checks. This is where the **FFT** optimization comes in.
 
 ## Features
@@ -66,17 +66,35 @@ Clone the repository:
 
 ```
 git clone https://github.com/Optimized-Brain/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
-cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform ```
+cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform
+
+```
+
 
 ## Usage
 
-To use the optimized AKS algorithm for primality testing, follow these steps:
+This project provides an implementation of the AKS (Agrawal-Kayal-Saxena) Primality Test, both in its original form and optimized using Fast Fourier Transform (FFT). Below are the steps to use the project, including running benchmarks, testing primality of numbers, and customizing the input for performance evaluation.
 
- **Clone the Repository:**
-   First, clone the repository to your local machine:
+### Running the Benchmark
 
-   ```bash
-   git clone https://github.com/yourusername/optimizing-aks-fft.git
-   cd optimizing-aks-fft
+The benchmarking script compares the performance of the normal AKS algorithm and the FFT-optimized version across various input sizes.
+
+1. To run the benchmark, simply execute the `main.py` file:
+
+   ```
+   python main.py
+```
+
+
+
+The script will display a table comparing the execution time of both implementations for different input sizes. Here's an example of the output:
+
+
+      Input |  Normal AKS Time (s) |     FFT AKS Time (s) |      Improvement (%)
+----------------------------------------------------------------------------
+        100 |             0.012345 |             0.005678 |              54.05%
+        200 |             0.045678 |             0.015678 |              65.69%
+
+This output allows you to see the time improvement achieved by using FFT over the traditional AKS algorithm.
 
 
