@@ -26,11 +26,24 @@ The AKS Primality Test is a deterministic test that checks whether a given numbe
 
 The AKS test consists of several steps:
 
-1. **Perfect Power Check**: If the number is a perfect power (i.e., it can be written as \( a^b \) for integers \( a \) and \( b \)), it's not prime.
-2. **Smallest r Calculation**: The algorithm calculates the smallest number \( r \) such that the order of \( n \) modulo \( r \), \( \text{ord}_r(n) \), is greater than \( \log^2 n \).
-3. **GCD Check**: The algorithm checks if the greatest common divisor of \( n \) and any smaller integer \( a \) is 1.
-4. **Polynomial Congruence**: The final step involves performing polynomial congruences to confirm the primality of \( n \).
+**Perfect Power Check**  
+   Verify if \( n \) is a perfect power. If \( n = a^b \) for integers \( a > 1 \) and \( b > 1 \), then \( n \) is **not prime**.
 
+2. **Smallest \( r \) Calculation**  
+   Find the smallest integer \( r \) such that the order of \( n \mod r \), denoted as \( \text{ord}_r(n) \), satisfies:  
+   \[
+   \text{ord}_r(n) > \log^2(n)
+   \]
+
+3. **GCD Check**  
+   Check if \( \gcd(a, n) = 1 \) for all integers \( a \) where \( 1 \leq a \leq r \). If \( \gcd(a, n) > 1 \) for any \( a \), \( n \) is **not prime**.
+
+4. **Polynomial Congruence**  
+   Verify the following polynomial congruence:  
+   \[
+   (x + a)^n \equiv x^n + a \pmod{n, x^r - 1} \quad \text{for all } 1 \leq a \leq \lfloor \sqrt{\phi(r)} \log(n) \rfloor
+   \]  
+   If the congruence holds, \( n \) is **prime**; otherwise, it is **composite**.
 The main computational challenge in the AKS test comes from the polynomial multiplication used in the congruence checks. This is where the **FFT** optimization comes in.
 
 ## Features
