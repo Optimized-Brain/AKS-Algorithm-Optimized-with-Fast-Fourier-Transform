@@ -10,7 +10,6 @@ This repository implements the **AKS Primality Test** optimized using **Fast Fou
 - [Detailed Explanation](#detailed-explanation)
   - [What is the AKS Primality Test?](#what-is-the-aks-primality-test)
   - [Optimization with FFT](#optimization-with-fft)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
