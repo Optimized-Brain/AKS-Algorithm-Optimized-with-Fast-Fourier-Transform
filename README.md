@@ -66,7 +66,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/Optimized-Brain/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
-cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform
+cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform ```
 
 ## Usage
 
