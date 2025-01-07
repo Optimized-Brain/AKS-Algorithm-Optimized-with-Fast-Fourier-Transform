@@ -67,3 +67,14 @@ Clone the repository:
 ```bash
 git clone https://github.com/Optimized-Brain/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
 cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform
+
+## Usage
+
+This project implements the AKS Primality Test, both in its original form and an optimized version using Fast Fourier Transform (FFT). Follow the steps below to use and explore the functionality.
+
+### Running the Benchmark
+
+To compare the performance of the normal AKS algorithm and the FFT-optimized version, simply run the `main.py` file:
+```bash
+python main.py
+
