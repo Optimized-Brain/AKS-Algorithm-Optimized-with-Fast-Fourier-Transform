@@ -16,7 +16,7 @@ This repository implements the **AKS Primality Test** optimized using **Fast Fou
 
 The **AKS Primality Test** is a famous primality test developed by Agrawal, Kayal, and Saxena in 2002. It is notable for being a deterministic polynomial-time algorithm to determine if a number is prime. This implementation uses the **Fast Fourier Transform (FFT)** to optimize polynomial multiplication, which is a crucial step in the AKS algorithm.
 
-By using FFT for polynomial multiplication, we reduce the time complexity involved in this operation from $\ O(n^2) \$ to $\ O(n \log n) \$, which helps the AKS test scale to larger numbers more efficiently.
+By using FFT for polynomial multiplication, we reduce the time complexity involved in this operation from $\( O(n^2) \)$ to $\( O(n \log n) \)$, which helps the AKS test scale to larger numbers more efficiently.
 
 
 ## Features
