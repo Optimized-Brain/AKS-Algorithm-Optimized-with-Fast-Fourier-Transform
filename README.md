@@ -64,7 +64,7 @@ Make sure you have **Python 3.x** installed on your machine. You can download Py
 
 Clone the repository:
 
-```bash
+```
 git clone https://github.com/Optimized-Brain/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
 cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform ```
 
