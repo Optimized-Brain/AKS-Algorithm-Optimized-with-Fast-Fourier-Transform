@@ -70,11 +70,13 @@ cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform ```
 
 ## Usage
 
-This project implements the AKS Primality Test, both in its original form and an optimized version using Fast Fourier Transform (FFT). Follow the steps below to use and explore the functionality.
+To use the optimized AKS algorithm for primality testing, follow these steps:
 
-### Running the Benchmark
+ **Clone the Repository:**
+   First, clone the repository to your local machine:
 
-To compare the performance of the normal AKS algorithm and the FFT-optimized version, simply run the `main.py` file:
-```bash
-python main.py
+   ```bash
+   git clone https://github.com/yourusername/optimizing-aks-fft.git
+   cd optimizing-aks-fft
+
 
