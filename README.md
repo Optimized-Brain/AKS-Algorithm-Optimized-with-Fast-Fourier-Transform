@@ -103,7 +103,7 @@ The benchmarking input sizes are specified in the `benchmark_aks()` function, lo
 To modify the input sizes, you can change the values in the ns list. For example:
 
 ```python
-ns = [10, 50, 100, 500, 1000]  # Adjust the numbers to test
+ns = [1000, 2000, 5000, 10000, 20000]  # Adjust the numbers to test
 ```
 After making changes, save the file and rerun the benchmark using the following command:
 ```bash
