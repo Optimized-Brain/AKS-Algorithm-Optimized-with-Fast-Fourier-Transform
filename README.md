@@ -10,7 +10,6 @@ This repository implements the **AKS Primality Test** optimized using **Fast Fou
 - [Detailed Explanation](#detailed-explanation)
   - [What is the AKS Primality Test?](#what-is-the-aks-primality-test)
   - [Optimization with FFT](#optimization-with-fft)
-- [License](#license)
 
 ## Introduction
 
@@ -282,8 +281,3 @@ By replacing the naive polynomial multiplication with FFT-based multiplication, 
 - **Improvement in AKS**: FFT optimization speeds up polynomial multiplication, improving the overall runtime of the AKS primality test for large inputs.
 
 By leveraging FFT, this project significantly enhances the performance of the AKS primality test, enabling it to handle larger numbers efficiently, making it more practical for use in real-world applications.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
