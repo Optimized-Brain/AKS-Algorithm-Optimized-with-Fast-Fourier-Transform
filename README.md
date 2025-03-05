@@ -43,12 +43,8 @@ python -m venv venv
 source venv/bin/activate     # On Linux/Mac
 venv\Scripts\activate        # On Windows
 ```
-3. **Install Dependencies**
-Use the requirements.txt file to install the necessary Python libraries:
-```bash
-pip install -r requirements.txt
 ```
-4. **Verify Installation**
+3. **Verify Installation**
 Run the project to ensure it is set up correctly:
 ```bash
 python main.py
