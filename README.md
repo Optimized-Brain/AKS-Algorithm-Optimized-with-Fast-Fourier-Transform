@@ -33,7 +33,7 @@ To run this project on your local machine, follow these steps:
 1. **Clone the Repository**  
    Clone the repository using Git and navigate to the project directory:  
    ```bash
-   git clone https://github.com/YourUsername/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
+   git clone https://github.com/Optimized-Brain/AKS-Algorithm-Optimized-with-Fast-Fourier-Transform.git
    cd AKS-Algorithm-Optimized-with-Fast-Fourier-Transform
 2. **Create a Virtual Environment** (optional but recommended)
 
